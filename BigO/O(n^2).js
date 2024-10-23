@@ -43,3 +43,35 @@ function bubbleSort(arr) {
 // Example usage
 const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
 console.log(bubbleSort(unsortedArray));
+
+// Selection sort
+function selectionSort(arr) {
+  let n = arr.length;
+
+  // Loop over the array, moving the boundary the sorted part one element at a time.
+  for (let i = 0; i < n - 1; i++) {
+    let minIndex = i;  // Assume the first unsorted element is the smallest.
+
+
+    // Find the index of the smallest element in the unsorted part
+    for (let j = i + 1; j < n; j++) {
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j; //Update the minIndex if a smaller element is found
+      }
+    }
+
+    //Swap the found minimum element with the first unsorted element
+    if (minIndex !== i) {
+      let temp = arr[i];
+      arr[i] = arr[minIndex];
+      arr[minIndex] = temp;
+    }
+  }
+
+  return arr; //Return the sorted array.
+}
+
+// Example usage
+const unsortedArray2 = [64, 25, 12, 22, 11];
+const sortedArray2 = selectionSort(unsortedArray2);
+console.log(sortedArray2);
