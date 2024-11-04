@@ -47,7 +47,6 @@ class Queue {
   }
 
   // Dequeue, Abstract behaviour of the queue that deletes a node in the queue and returns the deleted value
-
   dequeue() {
     //If the queue is empty, there is no need to return any value
     if (this.isEmpty()) {

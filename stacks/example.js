@@ -24,14 +24,12 @@ class Stack {
 
   push(value) {
     const newNode = new Node(value);
-
     if (this.isEmpty()) {
       this.top = newNode;
     } else {
       newNode.next = this.top;
       this.top = newNode;
     }
-
     this.size++;
   }
 
@@ -42,6 +40,7 @@ class Stack {
     const poppedValue = this.top.value;
     this.top = this.top.next;
     this.size--;
+
     return poppedValue;
   }
 }

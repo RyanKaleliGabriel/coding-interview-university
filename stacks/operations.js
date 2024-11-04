@@ -1,4 +1,4 @@
-//Node class: Represents a single element in the stack
+// Node class: Represents a single element in the stack
 class Node {
   constructor(value) {
     this.value = value; //Data the node holds
